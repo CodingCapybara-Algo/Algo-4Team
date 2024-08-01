@@ -4,14 +4,14 @@
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/rlawotmd"><img src="https://avatars.githubusercontent.com/u/117148033?v=4" width="150px;" alt=""/>
-    <td align="center"><a href="https://github.com/rlawotmd"><img src="https://avatars.githubusercontent.com/u/117148033?v=4" width="150px;" alt=""/>
-    <td align="center"><a href="https://github.com/rlawotmd"><img src="https://avatars.githubusercontent.com/u/117148033?v=4" width="150px;" alt=""/>
+    <td align="center"><a href="https://github.com/harvartz"><img src="https://avatars.githubusercontent.com/u/62278686?v=4" width="150px;" alt=""/>
+    <td align="center"><a href="https://github.com/jsm512"><img src="https://avatars.githubusercontent.com/u/93397687?v=4" width="150px;" alt=""/>
+    <td align="center"><a href="https://github.com/Shanate"><img src="https://avatars.githubusercontent.com/u/109050481?v=4" width="150px;" alt=""/>
   </tr>
     <tr>
-    <td align="center"><a href="https://github.com/rlawotmd" title="Code">rlawotmd</a></td>
-    <td align="center"><a href="https://github.com/rlawotmd" title="Code">rlawotmd</a></td>
-    <td align="center"><a href="https://github.com/rlawotmd" title="Code">rlawotmd</a></td>
+    <td align="center"><a href="https://github.com/harvartz" title="Code">Yang Seok Jin</a></td>
+    <td align="center"><a href="https://github.com/jsm512" title="Code">Seungmin Jin</a></td>
+    <td align="center"><a href="https://github.com/Shanate" title="Code">Shanate</a></td>
   </tr>
 </table>
 <br>
