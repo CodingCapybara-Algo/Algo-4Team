@@ -1,4 +1,4 @@
-package week_1.jsm512;
+package week_4.jsm512;
 
 import java.util.*;
 public class PSG_K번째수 {
