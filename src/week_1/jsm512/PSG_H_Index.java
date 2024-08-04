@@ -1,6 +1,5 @@
 package week_1.jsm512;
 
-import java.util.*;
 public class PSG_H_Index {
     static class Solution {
         public int solution(int[] citations) {
