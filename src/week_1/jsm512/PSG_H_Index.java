@@ -1,4 +1,4 @@
-package week_4.jsm512;
+package week_1.jsm512;
 
 public class PSG_H_Index {
     static class Solution {
