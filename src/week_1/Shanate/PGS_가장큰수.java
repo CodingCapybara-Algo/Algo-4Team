@@ -1,4 +1,4 @@
-package week_4.Shanate;
+package week_1.Shanate;
 
 import java.util.Arrays;
 /* first thinking - Permutation을 사용해 입력에 따른 모든 가지 수를 만들고, collection.sort 사용해서 배열 후 큰 수 출력

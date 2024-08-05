@@ -1,7 +1,6 @@
-package week_4.Shanate;
+package week_1.Shanate;
 
 import java.util.*;
-import java.io.*;
 
 // 받은 입력값을 정렬.
 // H : 논문 인용 횟수 >= H회 이상 인용된 논문의 개수

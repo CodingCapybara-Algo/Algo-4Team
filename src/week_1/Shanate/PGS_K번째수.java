@@ -1,4 +1,4 @@
-package week_4.Shanate;
+package week_1.Shanate;
 
 import java.util.*;
 
