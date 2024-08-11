@@ -3,7 +3,7 @@ package week_3.Shanate;
 import java.util.ArrayDeque;
 /*
 괄호 검사 -> 스택을 사용한다.(Last in, First Out)
-ex1) ( ) ( )
+ex1) ' ( ) ( ) '
 1. '('를 삽입      2. ')' 가 들어오면 비교하여(peek) '('를 추출한다.(poll)
 3. 마지막에 스택 검사(isEmpty -> true)
 */
