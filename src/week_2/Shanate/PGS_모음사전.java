@@ -32,7 +32,6 @@ public class PGS_모음사전 {
         dic.clear();
         dfs("");
 
-
         return dic.indexOf(word);
     }
 

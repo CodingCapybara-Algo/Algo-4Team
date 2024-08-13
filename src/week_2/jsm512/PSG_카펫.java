@@ -10,6 +10,9 @@ public class PSG_카펫 {
         => 반례가 나옴... 뭐지??????????
         => 차이가 최소가 되는 값으로 하게되면 타일 갯수가 안맞을 수 있음.. 조건을 바꿔줘야될듯
 
+
+
+        12
         */
         public int[] solution(int brown, int yellow) {
             int[] answer = {};

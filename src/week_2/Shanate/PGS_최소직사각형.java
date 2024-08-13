@@ -29,7 +29,6 @@ public class PGS_최소직사각형 {
             maxj = Math.max(maxj, sizes[j][1]);
         }
 
-
         answer = maxi * maxj;
         return answer;
     }
