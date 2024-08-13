@@ -32,7 +32,6 @@ public class PSG_모의고사 {
             // 여기서부터는 index가 중요하지 않음 key를 오름차순으로 정렬하기 위해 TreeMap 사용
             Map<Integer, List<Integer>> map = new TreeMap<>();
 
-            //
             for(int i = 0; i < sol.length; i++){
                 List<Integer> list = map.get(sol[i]);
                 if(list == null){
