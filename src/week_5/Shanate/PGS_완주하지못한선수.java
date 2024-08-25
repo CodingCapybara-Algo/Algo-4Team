@@ -7,7 +7,7 @@ import java.util.HashMap;
 무조건 탈락한 한 명을 낙인시킨다.
 */
 
-public class Main_PGS_완주하지못한선수_Shanate {
+public class PGS_완주하지못한선수 {
     static String solution(String[] participant, String[] completion) {
         String answer = "";
         HashMap<String, Integer> hashMap = new HashMap<>();
