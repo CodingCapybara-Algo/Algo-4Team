@@ -28,6 +28,7 @@ public class PGS_기능개발 {
             }
             //올림계산
             for(int i = 0; i < progresses.length; i++){
+                //7 3 9
                 q.offer((int)Math.ceil(arr[i] / speeds[i]));
             }
 

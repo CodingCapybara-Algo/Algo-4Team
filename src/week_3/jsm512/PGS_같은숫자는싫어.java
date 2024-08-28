@@ -3,7 +3,9 @@ package week_3.jsm512;
 import java.util.*;
 
 public class PGS_같은숫자는싫어 {
-
+/*
+stack은 toString이 가능 -> 아래서부터 0 번 idx로 보고 ---->
+ */
     public static class Solution {
         public int[] solution(int []arr) {
             int[] answer = {};
