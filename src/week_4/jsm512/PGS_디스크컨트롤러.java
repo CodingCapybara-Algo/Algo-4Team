@@ -45,6 +45,7 @@ public class PGS_디스크컨트롤러 {
             int start = arr[0][1];
             PriorityQueue<int[]> q = new PriorityQueue<>((o1,o2) -> o1[1] - o2[1]);
 
+
             int cnt = 0;
             int idx = 0;
             int sum = 0;

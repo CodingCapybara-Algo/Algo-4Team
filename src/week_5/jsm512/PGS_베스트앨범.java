@@ -2,6 +2,7 @@ package week_5.jsm512;
 
 import java.util.*;
 import java.util.stream.*;
+
 public class PGS_베스트앨범 {
 
 
@@ -11,6 +12,7 @@ public class PGS_베스트앨범 {
         2. 많이 재생된 장르 순으로 정렬 -> list 자료구조를 사용해 1.에서 생성한 Map의 Value값을 기준으로 내림차순으로 정렬
         3. 각 장르에 속한 음악들을 Plays 기준으로 내림차순 정렬 -> Map<String, Map<Integer, Integer>> 형태의 자료구조를 사용
         4. 각 장르 별 최대 두 개씩 꺼내 answer 배열에 담는다.
+        -> TreeMap으로 풀어보기
         */
         public int[] solution(String[] genres, int[] plays) {
             List<Integer> answer = new ArrayList<>();
@@ -38,6 +40,7 @@ public class PGS_베스트앨범 {
             List<String> genresOrderDesc = genre.keySet().stream() //앞서 생성한 각 장르 별 재생 횟수들을 stream 적용
                     .sorted(Comparator.comparing(s -> genre.get(s)).reversed()) //.sorted 메서드를 사용해서 장르들의 value를 비교해 내림차순으로 정렬해준다.
                     .collect(Collectors.toList()); //toList() 메소드를 사용해 List 형태로 반환
+
 
             for(String s : genresOrderDesc){ //정렬된 장르들을 순차적으로 접근
                 Map<Integer, Integer> idx_play = music.get(s); //s가 "classic"이면 -> music.get(s)로 반환되는 Map은 => {0=500, 2=150, 3=800} 이다.
