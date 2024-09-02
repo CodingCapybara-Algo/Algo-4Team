@@ -15,6 +15,10 @@ public class PGS_단어변환 {
         public int solution(String begin, String target, String[] words) {
             check = new boolean[words.length];
             // 변환할 수 있는 words 배열에 target 문자열이 없으면 -> 0 리턴
+            /*
+            Array -> List : asList()
+            List -> Array : toArray()
+            */
             List<String> list = new ArrayList<>(Arrays.asList(words));
             if(!list.contains(target)){
                 return 0;
