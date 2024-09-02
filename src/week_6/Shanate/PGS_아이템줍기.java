@@ -1,6 +1,6 @@
 package week_6.Shanate;
 
-public class Main_PGS_아이템줍기_Shanate {
+public class PGS_아이템줍기 {
     static int solution(int[][] rectangle, int characterX, int characterY, int itemX, int itemY) {
         int answer = 0;
 

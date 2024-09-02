@@ -7,7 +7,7 @@ dfs 구현이 더 쉬우니까 dfs로 구현.
 
 */
 
-public class Main_PGS_타겟넘버_Shanate {
+public class PGS_타겟넘버 {
         static int answer;
 
     static void dfs(int[] numbers, int target, int depth, int sum) {

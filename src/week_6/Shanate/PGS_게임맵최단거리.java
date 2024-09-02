@@ -2,7 +2,7 @@ package week_6.Shanate;
 
 import java.util.ArrayDeque;
 
-public class Main_PGS_게임맵최단거리_Shanate {
+public class PGS_게임맵최단거리 {
     
         static int[] dx = {-1, 0, 1, 0}; // 상 우 하 좌
         static int[] dy = {0, 1, 0, -1};
