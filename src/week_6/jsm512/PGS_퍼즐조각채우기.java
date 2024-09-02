@@ -68,11 +68,62 @@ public class PGS_퍼즐조각채우기 {
             /*
             회전 비교 => 꽉찬 배열을 두개 만들어서 puzzle을 돌려가면서 비교
             => 배열이 정사각형이 아니면 구현하기 힘들어짐... 그냥 좌표로 풀어야될듯?
-            포기포기포기포기포기포기포기포기푀고피ㅗㄱ푀고피괴포기ㅗ피고피ㅗ기포기ㅗ피고피ㅗ기ㅗ피고피
+            포기포기포기포기포기포기포기포기푀고피
+            정렬을 왜 하는 것인가..??
              */
+            boolean collect = false;
+            board.sort((o1, o2) -> {
+                if (o1[0] == o2[0]) {
+                    return o1[1] - o2[1];
+                }
+                return o1[0] - o2[0];
+            });
 
+            //0,90,180,270 총 네번 회전
+            for(int i = 0; i < 4; i++){
+                puzzle.sort((o1, o2) -> {
+                    if (o1[0] == o2[0]) {
+                        return o1[1] - o2[1];
+                    }
+                    return o1[0] - o2[0];
+                });
 
-            return false;
+                int x = puzzle.get(0)[0];
+                int y = puzzle.get(0)[1];
+
+                //상대 좌표로 변환 (0,0)을 기준으로
+                for(int j = 0; j < puzzle.size(); j++){
+                    puzzle.get(j)[0] -= x;
+                    puzzle.get(j)[1] -= y;
+                }
+
+                boolean check = true;
+
+                for(int j = 0; j < board.size(); j++){
+                    //상대 좌표 비교
+                    int[] board_point = board.get(j);
+                    int[] puzzle_point = puzzle.get(j);
+
+                    if(board_point[0] != puzzle_point[0] || board_point[1] != puzzle_point[1]){
+                        check = false;
+                        break;
+                    }
+                }
+
+                if(check){ //일치하면
+                    collect = true;
+                    break;
+                }else{ //회전
+                    for(int j = 0; j < puzzle.size(); j++){
+                        int tmp = puzzle.get(j)[0];
+                        // x -> y , y -> -x로 바꿔 이게 90도 회전임
+                        //[[0,0],[0,1],[1,1],[2,1],[2,2]] -> [[0,0],[1,0],[1,-1],[1,-2],[2,-2]]로 90도 회전함
+                        puzzle.get(j)[0] = puzzle.get(j)[1];
+                        puzzle.get(j)[1] = -tmp;
+                    }
+                }
+            }
+            return collect;
         }
         void checkSize(ArrayList<List<int[]>> board, ArrayList<List<int[]>> puzzle){
             /*
@@ -81,24 +132,25 @@ public class PGS_퍼즐조각채우기 {
             boolean[] check_puzzle = new boolean[puzzle.size()];
 
             for(int i = 0; i < board.size(); i++){
-
+                //board의 공간을 가져옴
                 List<int[]> cur_board = board.get(i);
-
+                //여기서는 퍼즐과 보드의 사이즈만 비교함 -> 사이즈가 다르면 rotation할 필요가 없음
                 for(int j = 0; j < puzzle.size(); j++){
                     if(!check_puzzle[j] && cur_board.size() == puzzle.get(j).size()){
+                        //사이즈가 같으면 -> 해당 퍼즐의 좌표를 따로 저장
                         List<int[]> cur_puzzle = puzzle.get(j);
-
+                        //rotation 메소드로 넘겨줌
                         if(rotation(cur_board, cur_puzzle)){
+                            //rotation해서 정확히 맞는다면, puzzle의 사이즈만큼 answer에 더해줌
                             answer += cur_puzzle.size();
+                            //사용한 puzzle은 방문처리
                             check_puzzle[j] = true;
+                            //이미 board의 빈칸과 puzzle이 짝을 이뤘으니 다른 puzzle은 볼 필요 없음 -> break
                             break;
                         }
                     }
                 }
             }
-
-
-
         }
 
         void bfs(int[][] maps, int x, int y, boolean[][] check, ArrayList<List<int[]>> p){
@@ -108,8 +160,8 @@ public class PGS_퍼즐조각채우기 {
 
             List<int[]> tmp = new ArrayList<>();
             tmp.add(new int[]{x-x,y-y});
-            while(!q.isEmpty()){
 
+            while(!q.isEmpty()){
                 int[] now = q.poll();
                 int cur_x = now[0];
                 int cur_y = now[1];
