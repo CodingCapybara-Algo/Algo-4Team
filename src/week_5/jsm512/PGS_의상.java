@@ -32,7 +32,6 @@ public class PGS_의상 {
                 .stream()
                 .collect(reducing(1L, (x, y) -> x * (y + 1))).intValue() - 1;
         */
-
             return answer - 1;
         }
     }
