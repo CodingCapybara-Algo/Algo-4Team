@@ -11,8 +11,8 @@ public class PGS_퍼즐조각채우기 {
     static int solution(int[][] game_board, int[][] table) {
         int answer = -1;
 
-        boolean[][] visitedTable = new boolean[table.length][table.length];
-        boolean[][] visitedBoard = new boolean[game_board.length][game_board.length];
+        boolean[][] visitedTable = new boolean[table.length][table.length]; // 테이블 방문 처리(퍼즐조각)
+        boolean[][] visitedBoard = new boolean[game_board.length][game_board.length]; // 게임보드 방문 처리
         List<List<int[]>> boardList = new ArrayList<>();
         List<List<int[]>> tableList = new ArrayList<>();
 
