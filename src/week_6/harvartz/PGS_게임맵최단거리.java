@@ -38,10 +38,16 @@ public class PGS_게임맵최단거리 {
 
         while (!qu.isEmpty()) {
             int[] now = qu.poll();
+            // 변수를 받아 놓고 쓴다!
+            // 종료 조건을 위에다가 건다 -> 뺴면서 먼저 확인할 수 있으니깐 사방 탐색 안돌려도 됨
+//                if (d_x == n - 1 && d_y == m - 1) {
+//                    return;
+//                }
             // 사방탐색 반복문이다.
             for (int i = 0; i < 4; i++) {
                 int d_x = now[0] + dx[i];
                 int d_y = now[1] + dy[i];
+
 
                 // 맵 밖을 벗어나면 안된다는 조건문이다.
                 if (0 <= d_x && d_x < n && 0 <= d_y && d_y < m) {
