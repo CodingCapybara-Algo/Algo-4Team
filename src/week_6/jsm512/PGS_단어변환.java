@@ -10,7 +10,7 @@ public class PGS_단어변환 {
         4. dog는 log 또는 cog로 변경 가능 (O)
         하나만 바꿔서 변경할 수 있는게 있으면 -> 깊이 우선 탐색으로 ㄱㄱ
         */
-        int answer = 0;
+        int answer = Integer.MAX_VALUE;
         boolean[] check;
         public int solution(String begin, String target, String[] words) {
             check = new boolean[words.length];
@@ -30,7 +30,8 @@ public class PGS_단어변환 {
         }
         void dfs(String begin, String target, String[] words, int depth){
             if(begin.equals(target)){
-                answer = depth;
+                //Math.min안해도 정답인 이유?
+                answer = Math.min(answer,depth);
             }
 
             for(int i = 0; i < words.length; i++){
